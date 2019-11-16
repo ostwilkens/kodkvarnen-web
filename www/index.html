@@ -1,0 +1,46 @@
+<html>
+
+<head>
+	<title>kodkvarnen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		body {
+			background: url(logo.svg) no-repeat center center;
+			background-size: 180px;
+		}
+
+		.main {
+			height: 200px;
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: table;
+			max-width: 100%;
+			box-sizing: border-box;
+			position: absolute !important;
+		}
+
+		.main::after {
+			content: "";
+			background: url(bg.svg) top center;
+			background-size: auto 100px;
+			opacity: 0.12;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+	</div>
+</body>
+
+</html>

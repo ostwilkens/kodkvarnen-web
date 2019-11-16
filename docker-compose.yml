@@ -1,0 +1,6 @@
+web:
+  image: nginx:alpine
+  volumes: 
+    - ./www:/usr/share/nginx/html
+  environment: 
+    VIRTUAL_HOST: kodkvarnen.dev.snajd.se
