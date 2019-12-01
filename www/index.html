@@ -1,46 +1,88 @@
 <html>
 
 <head>
-	<title>kodkvarnen</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kodkvarnen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes scroll {
+            from {
+                background-position: 0 0;
+            }
 
-	<style>
-		body {
-			background: url(logo.svg) no-repeat center center;
-			background-size: 180px;
-		}
+            to {
+                background-position: 0 100%;
+            }
+        }
 
-		.main {
-			height: 200px;
-			width: 100%;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			display: table;
-			max-width: 100%;
-			box-sizing: border-box;
-			position: absolute !important;
-		}
+        .kvarn-bg {
+            /* height: 100vh; */
+            background: url(img/bg.svg) top left;
+            background-size: 50% auto;
+            animation: scroll 60.0s infinite linear;
+            /* opacity: 0.12; */
+        }
 
-		.main::after {
-			content: "";
-			background: url(bg.svg) top center;
-			background-size: auto 100px;
-			opacity: 0.12;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			z-index: -1;
-		}
-	</style>
+        .bg-scroll-up {
+            animation-direction: reverse;
+        }
+    </style>
 </head>
 
-<body>
-	<div class="main">
-	</div>
+<body class="flex">
+    <div class="w-1/12 kvarn-bg hidden lg:block">
+    </div>
+    <div class="w-3/12 kvarn-bg bg-scroll-up">
+    </div>
+    <div class="w-9/12 lg:w-7/12 text-center mt-5">
+        <p class="title text-4xl md:text-6xl font-black text-center lg:pt-10">Kodkvarnen</p>
+        <a href="mailto:hej@kodkvarnen.se"
+            class="text-xl md:text-3xl font-black text-center lg:pt-10">hej@kodkvarnen.se</a>
+        <div class="w-full justify-center block lg:flex lg:flex-row mt-5 md:mt-10 pt-5 px-5">
+            <div class="max-w-xs px-5 mx-auto mb-5 sm:pb-5">
+                <img class="w-full rounded-full shadow-lg" src="/img/carl.jpg">
+                <div class="px-6 pt-4">
+                    <div class="font-bold text-xl text-center mb-0">Carl Öst Wilkens</div>
+                </div>
+                <p><a href="https://www.ostwilkens.se/">ostwilkens.se</a></p>
+                <div class="px-6 pb-4 text-center">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#programming</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#photography</span>
+                </div>
+            </div>
+            <div class="max-w-xs px-5 mx-auto mb-5 sm:pb-5">
+                <img class="w-full rounded-full shadow-lg" src="/img/bjorn.jpg">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl text-center mb-0">Björn Grundström</div>
+                </div>
+                <div class="px-6 pb-4 text-center">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#ideas</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#graphics</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#audio</span>
+                </div>
+            </div>
+            <div class="max-w-xs px-5 mx-auto mb-5 sm:pb-5">
+                <img class="w-full rounded-full shadow-lg" src="/img/johannes.jpg">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl text-center mb-0">Johannes Ridderstedt</div>
+                </div>
+                <div class="px-6 pb-4 text-center">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#networking</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#programming</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-2/12 kvarn-bg hidden lg:block">
+    </div>
 </body>
 
 </html>
