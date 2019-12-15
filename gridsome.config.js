@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Kodkvarnen',
+  siteUrl: 'https://kodkvarnen.se',
   siteDescription: 'virtual realists',
 
   templates: {

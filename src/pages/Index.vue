@@ -44,7 +44,7 @@ query {
 <script>
 import Title from "~/components/Title.vue";
 import PostCard from "~/components/PostCard.vue";
-import Member from "~/templates/Member.vue";
+import Member from "~/components/Member.vue";
 
 export default {
   components: {

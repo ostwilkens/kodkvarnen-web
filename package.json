@@ -4,7 +4,9 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
@@ -12,6 +14,7 @@
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.0",
     "@gridsome/transformer-yaml": "^0.2.1",
+    "gh-pages": "^2.1.1",
     "gridsome": "^0.7.0"
   },
   "devDependencies": {
